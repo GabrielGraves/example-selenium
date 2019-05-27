@@ -1,5 +1,6 @@
 package com.exampleSelenium.example;
 
+import com.google.common.io.Resources;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +28,7 @@ public class ExampleApplicationTests {
     @Before
     public void setUp() {
 
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromeDriver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", Resources.getResource("chromeDriver/chromedriver").getPath());
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
