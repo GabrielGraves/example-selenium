@@ -27,7 +27,7 @@ public class ExampleApplicationTests {
     @Before
     public void setUp() {
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromeDriver/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
@@ -66,7 +66,8 @@ public class ExampleApplicationTests {
 
     @After
     public void tearDown() {
-        driver.quit();
+
+        //driver.quit();
     }
 
 }
